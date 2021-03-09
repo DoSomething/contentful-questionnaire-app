@@ -58,7 +58,7 @@ export default class Config extends Component<ConfigProps, ConfigState> {
     return (
       <Workbench className={css({ margin: '80px' })}>
         <Form>
-          <Heading>App Config</Heading>
+          <Heading>Questionnaire Action Questions Config</Heading>
           <Paragraph>Welcome to your contentful app. This is your config page.</Paragraph>
         </Form>
       </Workbench>
