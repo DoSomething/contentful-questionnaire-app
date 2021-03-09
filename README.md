@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create Contentful App](https://github.com/contentful/create-contentful-app).
 
+Renders a custom Questionnaire UI to curate a range of questions.
+
+The core of our functionality exists in the `/src/components/Field.tsx` & `/src/components/QuestionEditor.js` files.
+
+Hosted on Github Page at https://dosomething.github.io/contentful-questionnaire-app via the [gh-pages](https://www.npmjs.com/package/gh-pages) library.
+
+Installed on our **Phoenix** Contentful Space in the **Questionnaire Action** Content Type in the **Questions** field as a [Contentful App extension](https://www.contentful.com/developers/docs/extensibility/app-framework/).
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -19,6 +27,10 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
+
+#### `npm run deploy`
+
+Builds the app for production and deploys to the github-pages site (via the `gh-pages` branch).
 
 ## Libraries to use
 
