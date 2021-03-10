@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { FormLabel, TextField, TextInput, Button, EditorToolbar } from '@contentful/forma-36-react-components';
+import { 
+	Button,
+	EditorToolbar,
+	FormLabel,
+	HelpText,
+	SectionHeading,
+	TextField,
+	TextInput,
+} from '@contentful/forma-36-react-components';
 
 const QuestionEditor = ({sdk}) => {
 	const questionTemplate = { title: "", placeholder: "", actionId: ""	 };
@@ -26,42 +34,52 @@ const QuestionEditor = ({sdk}) => {
 	      	</Button>
   		</EditorToolbar>
 
-		{questions.map((question, index) => {
-			return (
-				<div key={question.actionId}>	
-			  		<TextField 
-			  			style={{ marginTop: 10 }}
-			  			labelText="Question Title"
-			  			type="text" 
-			  			onChange={(e) => onChange(index, 'title', e.target.value)}
-			  			value={question.title} 
-			  		/>
+			{questions.map((question, index) => {
+				return (
+					<div key={question.actionId}>	
+							<SectionHeading style={{ marginTop: 10 }}>Question {index + 1}</SectionHeading>
 
-			  		<TextField 
-			  			style={{ marginTop: 10 }}
-			  			labelText="Question Placholder"
-			  			type="text" 
-			  			onChange={(e) => onChange(index, 'placeholder', e.target.value)}
-			  			value={question.placeholder} 
-			  		/>
+				  		<TextField 
+				  			style={{ marginTop: 10 }}
+				  			labelText="Title"
+				  			type="text" 
+				  			onChange={(e) => onChange(index, 'title', e.target.value)}
+				  			value={question.title} 
+				  		/>
 
-			  		<FormLabel style={{ marginTop: 10 }} formLabelText="Action ID">Action ID</FormLabel>
-			  		<TextInput 
-			  			type="number" 
-			  			width="small"
-			  			onChange={(e) => onChange(index, 'actionId', e.target.value)}
-			  			value={question.actionId} 
-			  		/>
+				  		<TextField 
+				  			style={{ marginTop: 10 }}
+				  			labelText="Placholder"
+				  			type="text" 
+				  			onChange={(e) => onChange(index, 'placeholder', e.target.value)}
+				  			value={question.placeholder} 
+				  		/>
 
-	  				<Button style={{ marginTop: 10 }} size="small" buttonType="negative" onClick={() => {
-	  					const updatedQuestions = [...questions];
-	  					updatedQuestions.splice(index, 1);
-	  					updateQuestions(updatedQuestions);
-	  				}}>
-	  					Delete Question
-	  				</Button>
-				</div>
-		)})}
+				  		<FormLabel style={{ marginTop: 10 }} formLabelText="Action ID">Action ID</FormLabel>
+				  		<TextInput 
+				  			type="number" 
+				  			width="small"
+				  			onChange={(e) => onChange(index, 'actionId', e.target.value)}
+				  			value={question.actionId} 
+				  		/>
+
+		  				<Button style={{ marginTop: 10 }} size="small" buttonType="negative" onClick={() => {
+		  					const updatedQuestions = [...questions];
+		  					updatedQuestions.splice(index, 1);
+		  					updateQuestions(updatedQuestions);
+		  				}}>
+		  					Delete Question
+		  				</Button>
+					</div>
+				)
+			})}
+
+			<HelpText 
+				style={{ marginTop: 10, fontStyle: 'italic' }}
+			>
+				The questions appearing in the Questionnaire. Each question requires a Title, Placeholder Text, & 
+				valid <a target="_blank" href="https://bit.ly/30xpNFC">Rogue Action ID</a>.
+			</HelpText>
   	</div>
   );
 };
