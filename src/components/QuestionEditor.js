@@ -21,48 +21,47 @@ const QuestionEditor = ({sdk}) => {
   return (
   	<div>
   		<EditorToolbar>
-  			<Button size="small" buttonType="muted" onClick={() => updateQuestions([...questions, questionTemplate])}>
-        	Add Question
-      	</Button>
+	  		<Button size="small" buttonType="muted" onClick={() => updateQuestions([...questions, questionTemplate])}>
+	        	Add Question
+	      	</Button>
   		</EditorToolbar>
 
-  			{questions.map((question, index) => {
-  				return (
-  					<div key={question.actionId}>	
-				  		<TextField 
-				  			style={{ marginTop: 10 }}
-				  			labelText="Question Title"
-				  			type="text" 
-				  			onChange={(e) => onChange(index, 'title', e.target.value)}
-				  			value={question.title} 
-				  		/>
+		{questions.map((question, index) => {
+			return (
+				<div key={question.actionId}>	
+			  		<TextField 
+			  			style={{ marginTop: 10 }}
+			  			labelText="Question Title"
+			  			type="text" 
+			  			onChange={(e) => onChange(index, 'title', e.target.value)}
+			  			value={question.title} 
+			  		/>
 
-				  		<TextField 
-				  			style={{ marginTop: 10 }}
-				  			labelText="Question Placholder"
-				  			type="text" 
-				  			onChange={(e) => onChange(index, 'placeholder', e.target.value)}
-				  			value={question.placeholder} 
-				  		/>
+			  		<TextField 
+			  			style={{ marginTop: 10 }}
+			  			labelText="Question Placholder"
+			  			type="text" 
+			  			onChange={(e) => onChange(index, 'placeholder', e.target.value)}
+			  			value={question.placeholder} 
+			  		/>
 
-				  		<FormLabel style={{ marginTop: 10 }} formLabelText="Action ID">Action ID</FormLabel>
-				  		<TextInput 
-				  			type="number" 
-				  			width="small"
-				  			onChange={(e) => onChange(index, 'actionId', e.target.value)}
-				  			value={question.actionId} 
-				  		/>
+			  		<FormLabel style={{ marginTop: 10 }} formLabelText="Action ID">Action ID</FormLabel>
+			  		<TextInput 
+			  			type="number" 
+			  			width="small"
+			  			onChange={(e) => onChange(index, 'actionId', e.target.value)}
+			  			value={question.actionId} 
+			  		/>
 
-		  				<Button style={{ marginTop: 10 }} size="small" buttonType="negative" onClick={() => {
-		  					const updatedQuestions = [...questions];
-		  					updatedQuestions.splice(index, 1);
-		  					updateQuestions(updatedQuestions);
-		  				}}>
-		  					Delete Question
-		  				</Button>
-  				</div>
-
-  			)})}
+	  				<Button style={{ marginTop: 10 }} size="small" buttonType="negative" onClick={() => {
+	  					const updatedQuestions = [...questions];
+	  					updatedQuestions.splice(index, 1);
+	  					updateQuestions(updatedQuestions);
+	  				}}>
+	  					Delete Question
+	  				</Button>
+				</div>
+		)})}
   	</div>
   );
 };
