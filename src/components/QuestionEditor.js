@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { 
 	Button,
-	EditorToolbar,
 	FormLabel,
 	HelpText,
 	SectionHeading,
@@ -28,15 +27,9 @@ const QuestionEditor = ({sdk}) => {
 
   return (
   	<div>
-  		<EditorToolbar>
-	  		<Button size="small" buttonType="muted" onClick={() => updateQuestions([...questions, questionTemplate])}>
-	        	Add Question
-	      	</Button>
-  		</EditorToolbar>
-
 			{questions.map((question, index) => {
 				return (
-					<div key={question.actionId}>	
+					<div key={index}>	
 							<SectionHeading style={{ marginTop: 10 }}>Question {index + 1}</SectionHeading>
 
 				  		<TextField 
@@ -55,7 +48,7 @@ const QuestionEditor = ({sdk}) => {
 				  			value={question.placeholder} 
 				  		/>
 
-				  		<FormLabel style={{ marginTop: 10 }} formLabelText="Action ID">Action ID</FormLabel>
+				  		<FormLabel style={{ marginTop: 10 }}>Action ID</FormLabel>
 				  		<TextInput 
 				  			type="number" 
 				  			width="small"
@@ -74,11 +67,15 @@ const QuestionEditor = ({sdk}) => {
 				)
 			})}
 
+  		<Button  style={{ marginTop: 20 }} size="medium" icon="Plus" buttonType="positive" onClick={() => updateQuestions([...questions, questionTemplate])}>
+        	Add Question
+      </Button>
+
 			<HelpText 
 				style={{ marginTop: 10, fontStyle: 'italic' }}
 			>
 				The questions appearing in the Questionnaire. Each question requires a Title, Placeholder Text, & 
-				valid <a target="_blank" href="https://bit.ly/30xpNFC">Rogue Action ID</a>.
+				valid <a target="_blank" rel="noreferrer" href="https://bit.ly/30xpNFC">Rogue Action ID</a>.
 			</HelpText>
   	</div>
   );
