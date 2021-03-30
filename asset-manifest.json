@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/contentful-questionnaire-app/static/css/main.58b278a1.chunk.css",
-    "main.js": "/contentful-questionnaire-app/static/js/main.dbc38e9b.chunk.js",
-    "main.js.map": "/contentful-questionnaire-app/static/js/main.dbc38e9b.chunk.js.map",
+    "main.js": "/contentful-questionnaire-app/static/js/main.a8104abf.chunk.js",
+    "main.js.map": "/contentful-questionnaire-app/static/js/main.a8104abf.chunk.js.map",
     "runtime-main.js": "/contentful-questionnaire-app/static/js/runtime-main.df67aca4.js",
     "runtime-main.js.map": "/contentful-questionnaire-app/static/js/runtime-main.df67aca4.js.map",
     "static/css/2.25ff1c20.chunk.css": "/contentful-questionnaire-app/static/css/2.25ff1c20.chunk.css",
-    "static/js/2.fafe829c.chunk.js": "/contentful-questionnaire-app/static/js/2.fafe829c.chunk.js",
-    "static/js/2.fafe829c.chunk.js.map": "/contentful-questionnaire-app/static/js/2.fafe829c.chunk.js.map",
+    "static/js/2.3a77a176.chunk.js": "/contentful-questionnaire-app/static/js/2.3a77a176.chunk.js",
+    "static/js/2.3a77a176.chunk.js.map": "/contentful-questionnaire-app/static/js/2.3a77a176.chunk.js.map",
     "index.html": "/contentful-questionnaire-app/index.html",
     "static/css/2.25ff1c20.chunk.css.map": "/contentful-questionnaire-app/static/css/2.25ff1c20.chunk.css.map",
     "static/css/main.58b278a1.chunk.css.map": "/contentful-questionnaire-app/static/css/main.58b278a1.chunk.css.map",
-    "static/js/2.fafe829c.chunk.js.LICENSE.txt": "/contentful-questionnaire-app/static/js/2.fafe829c.chunk.js.LICENSE.txt"
+    "static/js/2.3a77a176.chunk.js.LICENSE.txt": "/contentful-questionnaire-app/static/js/2.3a77a176.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.df67aca4.js",
     "static/css/2.25ff1c20.chunk.css",
-    "static/js/2.fafe829c.chunk.js",
+    "static/js/2.3a77a176.chunk.js",
     "static/css/main.58b278a1.chunk.css",
-    "static/js/main.dbc38e9b.chunk.js"
+    "static/js/main.a8104abf.chunk.js"
   ]
 }
